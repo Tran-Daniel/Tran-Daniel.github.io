@@ -1,0 +1,67 @@
+h1 {
+  position: absolute;
+  right: 52vw;
+  top: 15vh;
+
+  font-family: Prompt;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 60px;
+  line-height: 145px;
+  letter-spacing: 0.1em;
+
+  color: #1500CF;
+}
+
+h2 {
+
+  position: absolute;
+  right: 52vw;
+  top: 35vh;
+  
+  font-family: Prompt;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 73px;
+  /* identical to box height */
+  
+  letter-spacing: 0.1em;
+  
+  color: #9287F3;
+}
+
+h3 {
+  position: absolute;
+  width: 32vw;
+  right: 52vw;
+  top: 50vh;
+
+  font-family: Prompt;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 20px;
+  line-height: 32px;
+  text-align: right;
+
+  color: #5440FF;
+}
+
+Link {
+  position: relative;
+
+  font-family: Prompt;
+  font-style: normal;
+  font-weight: lighter;
+  font-size: 40px;
+  top: 1vh;
+  left: 10vw;
+
+  color: #ffffff;
+}
+
+
+
+
+
+
