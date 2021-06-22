@@ -6,7 +6,7 @@ function Header() {
     <div className="Header">
       <h1>DANIEL TRAN</h1>
       <h2>SOFTWARE DEVELOPER</h2>
-      <h3>4A CS Student at the University of Waterloo looking for a software engineering position.</h3>
+      <h3>4A CS Student at the University of Waterloo looking for a Fall 2021 Coop position.</h3>
       {/* <Link to="/second">Second</Link> */}
     </div>
   );
