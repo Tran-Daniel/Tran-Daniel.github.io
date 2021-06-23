@@ -20,7 +20,7 @@ function Page() {
       <div className="right">
         <h4>This page is currently under construction. Please check back soon for updates 👋</h4>
         <div className="buttonContainer">
-          <Button onClick={() => {download("./DanielTran4Av4.pdf", "DanielTranResumsse.pdf")}} variant="contained" color="primary">Resume</Button>
+          <Button onClick={() => {download("./DanielTran4Av4.pdf", "DanielTranResume.pdf")}} variant="contained" color="primary">Resume</Button>
         </div>
       </div>
       <span className="dot first"></span>
