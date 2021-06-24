@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "@material-ui/core/Button";
 import "./Page.css";
 
 function Page() {
+  const [darkMode, setDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setDarkMode(darkMode ? false : true);
+    document.body.style.backgroundColor = getComputedStyle(document.documentElement)
+    .getPropertyValue('--clr-main-100');
+  }
+
+
   function download(fileUrl, fileName) {
     var a = document.createElement("a");
     a.href = fileUrl;
@@ -12,7 +21,7 @@ function Page() {
   }
 
   return (
-    <div>
+    <div className="pageContainer" data-theme={darkMode ? "dark" : "light"}>
       <div className="split">
         <div className="container left">
           <h1>DANIEL TRAN</h1>
@@ -28,6 +37,17 @@ function Page() {
             This page is currently under construction. Please check back soon for
             updates 👋
           </h4>
+          <div className="buttonContainer">
+            <Button
+              onClick={() => {
+                toggleDarkMode();
+              }}
+              variant="contained"
+              color="primary"
+            >
+              {darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
+            </Button>
+          </div>
           <div className="buttonContainer">
             <Button
               onClick={() => {

@@ -1,31 +1,37 @@
 :root{
-  --clr-light-100: #FFF;
-  --clr-light-300: #F1EFFF;
-  --clr-light-400: #9287F3;
-  --clr-light-600: #5440FF;
-  --clr-light-800: #1500CF;
-  --clr-light-1000: #000;
-
-  --clr-dark-100: #000;
-  --clr-dark-300: #005C63;
-  --clr-dark-400: #DBFCFF;
-  --clr-dark-600: #C5FBFF;
-  --clr-dark-800: #CEF1F3;
-  --clr-dark-1000: #FFF;
+  --clr-main-100: #FFF;
+  --clr-main-300: #F1EFFF40;
+  --clr-main-400: #9287F3;
+  --clr-main-600: #5440FF;
+  --clr-main-800: #1500CF;
+  --clr-main-1000: #000;
 
   --ff-primary: "Prompt", normal;
   font-size: 75%;
   overflow: hidden;
 }
 
-/* .pageContainer{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+[data-theme="dark"] {
+  --clr-main-100: #000;
+  --clr-main-300: #005C6310;
+  --clr-main-400: #DBFCFF;
+  --clr-main-600: #C5FBFF;
+  --clr-main-800: #CEF1F3;
+  --clr-main-1000: #FFF;
+}
 
-    background: #FFFFFF;
-} */
+.pageContainer{
+  position:fixed;
+  padding:0;
+  margin:0;
+
+  top:0;
+  left:0;
+
+  width: 100%;
+  height: 100%;
+    background-color: var(--clr-main-100);
+}
 
 .split {
   display: flex;
@@ -35,6 +41,7 @@
 .container {
   margin-inline: auto;
   text-align: center;
+  z-index:1;
 }
 
 .left {
@@ -51,7 +58,7 @@ h1 {
   font-size: 4.5rem;
   line-height: 1;
   letter-spacing: 0.1em;
-  color: var(--clr-light-800);
+  color: var(--clr-main-800);
 }
 
 h2 {
@@ -60,7 +67,7 @@ h2 {
   font-size: 2.3rem;
   line-height: 1.2;
   letter-spacing: 0.1em;
-  color: var(--clr-light-400);
+  color: var(--clr-main-400);
 }
 
 h3 {
@@ -69,7 +76,7 @@ h3 {
   width: 25em;
   font-size: 1.5rem;
   line-height: 1.6;
-  color: var(--clr-light-600);
+  color: var(--clr-main-600);
   margin-left: auto; 
   margin-right: 0;
 }
@@ -80,7 +87,7 @@ h4 {
   font-size: 1.6rem;
   width: 25em;
   line-height: 1.6;
-  color: var(--clr-light-1000);
+  color: var(--clr-main-1000);
   margin-bottom: 2em;
 }
 
@@ -95,9 +102,7 @@ h4 {
   height: 80vh;
   width: 80vh;
   border-radius: 50%;
-  bottom: -50vh;
-  background-color: var(--clr-light-300); 
-  z-index: -1;
+  background-color: var(--clr-main-300); 
 }
 
 .first {
@@ -133,6 +138,12 @@ h4 {
   }
   .split > * {
     flex-basis: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .split > * {
+    margin: 0 !important;
   }
 }
 
