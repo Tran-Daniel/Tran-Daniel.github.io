@@ -7,10 +7,10 @@ function Page() {
 
   const toggleDarkMode = () => {
     setDarkMode(darkMode ? false : true);
-    document.body.style.backgroundColor = getComputedStyle(document.documentElement)
-    .getPropertyValue('--clr-main-100');
-  }
-
+    document.body.style.backgroundColor = getComputedStyle(
+      document.documentElement
+    ).getPropertyValue("--clr-main-100");
+  };
 
   function download(fileUrl, fileName) {
     var a = document.createElement("a");
@@ -20,12 +20,34 @@ function Page() {
     a.click();
   }
 
+  const textList = ["SOFTWARE DEVELOPER", "ROCK CLIMBER", "NAP ENTHUSIAST"];
+
+  textSequence(1);
+
+  function textSequence(i) {
+    if (textList.length > i) {
+      setTimeout(function () {
+        var cycle = document.getElementById("cycle");
+        cycle.classList.add('pre-animation');
+        setTimeout(function(){
+          cycle.innerHTML = textList[i];
+          textSequence(++i);
+          cycle.classList.remove('pre-animation')
+        }, 600)
+      }, 3000);
+    } else if (textList.length == i) {
+      textSequence(0);
+    }
+  }
+
   return (
     <div className="pageContainer" data-theme={darkMode ? "dark" : "light"}>
       <div className="split">
         <div className="container left">
           <h1>DANIEL TRAN</h1>
-          <h2>SOFTWARE DEVELOPER</h2>
+          <div id="cycle" className="title">
+            SOFTWARE DEVELOPER
+          </div>
           <h3>
             4A CS Student at the University of Waterloo looking for a Fall 2021
             Coop position.
@@ -34,8 +56,8 @@ function Page() {
         </div>
         <div className="container right">
           <h4>
-            This page is currently under construction. Please check back soon for
-            updates 👋
+            This page is currently under construction. Please check back soon
+            for updates 👋
           </h4>
           <div className="buttonContainer">
             <Button

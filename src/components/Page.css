@@ -1,6 +1,6 @@
 :root{
   --clr-main-100: #FFF;
-  --clr-main-300: #F1EFFF40;
+  --clr-main-300: #c3bafd40;
   --clr-main-400: #9287F3;
   --clr-main-600: #5440FF;
   --clr-main-800: #1500CF;
@@ -30,7 +30,7 @@
 
   width: 100%;
   height: 100%;
-    background-color: var(--clr-main-100);
+  background-color: var(--clr-main-100);
 }
 
 .split {
@@ -61,13 +61,18 @@ h1 {
   color: var(--clr-main-800);
 }
 
-h2 {
+.title {
   font-family: var(--ff-primary);
   font-weight: normal;
   font-size: 2.3rem;
   line-height: 1.2;
   letter-spacing: 0.1em;
   color: var(--clr-main-400);
+  transition: all 0.6s;
+}
+
+.title.pre-animation {
+  opacity:0;
 }
 
 h3 {
