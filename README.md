@@ -26,6 +26,6 @@ Deploys the application
 - Mobile view is messed up
 
 ## TO DO:
-- Solidify Consistent Theme (colors)
+- Button Colors
 - Implement "Upcoming Features/To Do List" Component
 - Implement Generic List Component (Work Experience, Projects etc)

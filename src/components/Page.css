@@ -1,9 +1,9 @@
 :root{
   --clr-main-100: #FFF;
-  --clr-main-300: #c3bafd40;
-  --clr-main-400: #9287F3;
-  --clr-main-600: #5440FF;
-  --clr-main-800: #1500CF;
+  --clr-main-300: #A3A9E060;
+  --clr-main-400: #4754C2;
+  --clr-main-600: #303A88;
+  --clr-main-800: #1E245C;
   --clr-main-1000: #000;
 
   --ff-primary: "Prompt", normal;
@@ -13,10 +13,10 @@
 
 [data-theme="dark"] {
   --clr-main-100: #000;
-  --clr-main-300: #005C6310;
-  --clr-main-400: #DBFCFF;
-  --clr-main-600: #C5FBFF;
-  --clr-main-800: #CEF1F3;
+  --clr-main-300: #C2C8FE20;
+  --clr-main-400: #B0B7FC;
+  --clr-main-600: #D1D4F0;
+  --clr-main-800: #EEF1FC;
   --clr-main-1000: #FFF;
 }
 
@@ -90,16 +90,15 @@ h4 {
   font-family: var(--ff-primary);
   font-weight: 100;
   font-size: 1.6rem;
-  width: 25em;
+  width: 19em;
   line-height: 1.6;
   color: var(--clr-main-1000);
   margin-bottom: 2em;
 }
 
 .buttonContainer {
-  position: relative;
-  top: 10vh;
   font-family: Prompt;
+  margin-block: 4vh;
 }
 
 .dot {
@@ -108,6 +107,7 @@ h4 {
   width: 80vh;
   border-radius: 50%;
   background-color: var(--clr-main-300); 
+  filter: blur(1rem);
 }
 
 .first {
@@ -126,7 +126,7 @@ h4 {
   animation: 1s ease-out 0s 1 slideInFromRight;
 }
 
-@media (min-width: 75em) {  
+@media (min-width: 60em) {  
   .left {
     position:relative;
     top: 20vh;
@@ -138,6 +138,10 @@ h4 {
     text-align: left;
     margin-left: 5vw;
   }
+  .title {
+    position:relative;
+    top: -1vh;
+  }
   .split {
     flex-direction: row;
   }
@@ -145,12 +149,12 @@ h4 {
     flex-basis: 100%;
   }
 }
-
-@media (max-width: 480px) {
+/* 
+@media (max-width: 60em) {
   .split > * {
     margin: 0 !important;
   }
-}
+} */
 
 @keyframes slideInFromLeft {
   0% {
