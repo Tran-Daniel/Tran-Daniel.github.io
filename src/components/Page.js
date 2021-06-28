@@ -20,25 +20,31 @@ function Page() {
     a.click();
   }
 
-  const textList = ["SOFTWARE DEVELOPER", "ROCK CLIMBER", "NAP ENTHUSIAST"];
+  const textList = ["SOFTWARE DEVELOPER", "ROCK CLIMBER", "SUNSCREEN ADVOCATE"];
 
-  textSequence(1);
-
-  function textSequence(i) {
-    if (textList.length > i) {
+  React.useEffect(() => {
+    var cycle;
+    var interval;
+  
+    setTimeout(function () {
+      cycle = document.getElementById("cycle");
+      interval = setInterval(cycleText, 3000);
+    }, 100);
+  
+    let i = 1;
+  
+    const cycleText = () => {
+      cycle.classList.add('pre-animation');
       setTimeout(function () {
-        var cycle = document.getElementById("cycle");
-        cycle.classList.add('pre-animation');
-        setTimeout(function(){
-          cycle.innerHTML = textList[i];
-          textSequence(++i);
-          cycle.classList.remove('pre-animation')
-        }, 600)
-      }, 3000);
-    } else if (textList.length == i) {
-      textSequence(0);
-    }
-  }
+        cycle.innerHTML = textList[i];
+        cycle.classList.remove("pre-animation");
+        i = ++i % textList.length;
+      }, 600);
+    };
+
+    return () => window.clearTimeout(interval);
+  }, []);
+
 
   return (
     <div className="pageContainer" data-theme={darkMode ? "dark" : "light"}>
