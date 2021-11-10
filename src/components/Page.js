@@ -20,7 +20,7 @@ function Page() {
     a.click();
   }
 
-  const textList = ["SOFTWARE DEVELOPER", "ROCK CLIMBER", "SUNSCREEN ADVOCATE"];
+  const textList = ["SOFTWARE DEVELOPER", "ROCK CLIMBER", "FOODIE"];
 
   React.useEffect(() => {
     var cycle;
@@ -55,16 +55,17 @@ function Page() {
             SOFTWARE DEVELOPER
           </div>
           <h3>
-            4A CS Student at the University of Waterloo looking for a Fall 2021
-            Coop position.
+            4A CS Student at the University of Waterloo looking for a New Grad Fulltime Position 
           </h3>
           {/* <Link to="/second">Second</Link> */}
         </div>
         <div className="container right">
           <h4>
-            This page is currently under construction. Please check back soon
-            for updates 👋
+            Hello! Welcome to my page. 
           </h4>
+          <h5>
+            As you can see, my name is Daniel. I am always down to climb and try new things. If you are ever climbing in Toronto, hit me up! 👋
+          </h5>
           <div className="buttonContainer">
             <Button
               onClick={() => {
@@ -79,7 +80,7 @@ function Page() {
           <div className="buttonContainer">
             <Button
               onClick={() => {
-                download("./DanielTran4Av4.pdf", "DanielTranResume.pdf");
+                download("./DanielTran5v6.pdf", "TranDanielResume.pdf");
               }}
               variant="contained"
               color="primary"

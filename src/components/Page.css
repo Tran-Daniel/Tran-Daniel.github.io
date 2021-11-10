@@ -89,6 +89,16 @@ h3 {
 h4 {
   font-family: var(--ff-primary);
   font-weight: 100;
+  font-size: 2rem;
+  width: 19em;
+  line-height: 1.6;
+  color: var(--clr-main-1000);
+  margin-bottom: 0em;
+}
+
+h5 {
+  font-family: var(--ff-primary);
+  font-weight: 100;
   font-size: 1.6rem;
   width: 19em;
   line-height: 1.6;
