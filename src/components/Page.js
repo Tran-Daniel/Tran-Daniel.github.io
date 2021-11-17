@@ -20,7 +20,7 @@ function Page() {
     a.click();
   }
 
-  const textList = ["SOFTWARE DEVELOPER", "ROCK CLIMBER", "FOODIE"];
+  const textList = ["SOFTWARE DEVELOPER", "CLIMBER OF ROCKS", "CONSUMER OF FOOD"];
 
   React.useEffect(() => {
     var cycle;
@@ -64,7 +64,7 @@ function Page() {
             Hello! Welcome to my page. 
           </h4>
           <h5>
-            As you can see, my name is Daniel. I am always down to climb and try new things. If you are ever climbing in Toronto, hit me up! 👋
+            My name is Daniel. I'm always looking to learn new things! Feel free to reach out to me if you have any questions 👋
           </h5>
           <div className="buttonContainer">
             <Button
@@ -80,7 +80,7 @@ function Page() {
           <div className="buttonContainer">
             <Button
               onClick={() => {
-                download("./DanielTran5v6b.pdf", "TranDanielResume.pdf");
+                download("./DanielTran5v7.pdf", "TranDanielResume.pdf");
               }}
               variant="contained"
               color="primary"
