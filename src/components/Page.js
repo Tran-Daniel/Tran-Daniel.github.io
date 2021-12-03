@@ -80,7 +80,7 @@ function Page() {
           <div className="buttonContainer">
             <Button
               onClick={() => {
-                download("./DanielTran5v7.pdf", "TranDanielResume.pdf");
+                download("./DanielTran6v4.pdf", "TranDanielResume.pdf");
               }}
               variant="contained"
               color="primary"
